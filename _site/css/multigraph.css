@@ -1,0 +1,27 @@
+footer {
+    bottom: 24px;
+    position: absolute;
+}
+table.logo-footer td {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+table.release-table {
+    margin-left: 40px;
+    width: auto;
+    border-collapse: collapse;
+}
+table.release-table td,th {
+    padding: 6px 10px 6px 10px;
+    border: 1px solid gray;
+}
+table.release-table td.notes {
+    text-align: center;
+}
+table.release-table tr.switch {
+    background: #ededed;
+}
+pre.prettyprint {
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
