@@ -1,58 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Multigraph - Interactive Data Graphs for the Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="/css/multigraph.css" media="screen">
-  </head>
-  <body>
+---
+title: Download
+download: selected
+---
 
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/index.html"><span class="navbar-brand"><img src="/images/multigraph-top-white.png" alt='' />Multigraph</span></a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li><a href="/index.html">About</a></li>
-            <li>
-              <a href="#">Implementation</a>
-            </li>
-            <li>
-              <a href="/docs">Documentation</a>
-            </li>
-            <li>
-              <a href="/examples">Examples</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Other <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="/tester">Tester</a></li>
-                <li><a href="/credits">Credits</a></li>
-                <li><a href="/docs/license.html">License</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/download">Download</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-        <br /><br /><br /><br />
+{% include header.html %}
+{% include inc.prettify.html %}
+{% include content.html %}
 
         <h3>Download Multigraph for HTML5</h3>
             Note that you do not actually need to download Multigraph in order to use it; you can use Multigraph in any web page by including something like the following in the <code>&#60;head&#62;</code> of your HTML page:<br /><br />
@@ -157,8 +110,4 @@
 
 Development of the older, outdated Flash version is also on GitHub <a href="http://github.com/multigraph/flash-multigraph">here</a>.</p>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% include end.html %}

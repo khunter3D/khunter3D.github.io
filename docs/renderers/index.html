@@ -1,56 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Multigraph - Interactive Data Graphs for the Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
-  </head>
-  <body>
+---
+title: Renderers
+docs: selected
+---
 
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/index.html"><span class="navbar-brand"><img src="/images/multigraph-top-white.png" alt='' />Multigraph</span></a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li><a href="/index.html">About</a></li>
-            <li>
-              <a href="#">Implementation</a>
-            </li>
-            <li class="active">
-              <a href="/docs">Documentation</a>
-            </li>
-            <li>
-              <a href="/examples">Examples</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Other <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="/tester">Tester</a></li>
-                <li><a href="/credits">Credits</a></li>
-                <li><a href="/docs/license.html">License</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/download">Download</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-        <br /><br /><br /><br />
+{% include header.html %}
+{% include content.html %}
 
       <pre>
 Name: band
@@ -437,8 +391,4 @@ Data Types:
         white
         </pre>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% include end.html %}

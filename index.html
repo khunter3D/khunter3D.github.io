@@ -1,25 +1,12 @@
 ---
-title: Multigraph - 
+title: Interactive Data Graphs for the Web 
+about: selected
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>{{ page.title }} Interactive Data Graphs for the Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
-    <script type="text/javascript" src="http://multigraph.github.io/download/multigraph-min.js"></script>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="/css/multigraph.css" media="screen">
-  </head>
-  <body>
-
-      {% include nav.html %}
-
-    <div class="container">
-        <br /><br /><br /><br />
+{% include header.html %}
+{% include inc.multigraph.html %}
+{% include inc.prettify.html %}
+{% include content.html %}
 
       <div class="jumbotron">
         <h1>Multigraph</h1>

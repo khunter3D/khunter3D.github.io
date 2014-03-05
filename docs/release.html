@@ -1,57 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Multigraph - Interactive Data Graphs for the Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="/css/annotated-mugl.css" media="screen">
-  </head>
-  <body>
+---
+title: Releasing Multigraph
+docs: selected
+---
 
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/index.html"><span class="navbar-brand"><img src="/images/multigraph-top-white.png" alt='' />Multigraph</span></a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li><a href="/index.html">About</a></li>
-            <li>
-              <a href="#">Implementation</a>
-            </li>
-            <li class="active">
-              <a href="/docs">Documentation</a>
-            </li>
-            <li>
-              <a href="/examples">Examples</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Other <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="/tester">Tester</a></li>
-                <li><a href="/credits">Credits</a></li>
-                <li><a href="/docs/license.html">License</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/download">Download</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-        <br /><br /><br /><br />
+{% include header.html %}
+{% include content.html %}
 
     <h2>Creating a Release of Multigraph</h2>
     <ol>
@@ -74,44 +27,44 @@
         <li>
             <p>Decide on a version number for the release; this is usually done by incrementing the minor verison number (the part after the decimal) by one. You can view a list of all the release tags in the repository by running the "tags" script in the top level of the js-multigraph project.</p>
 
-            <pre><code> cd js-multigraph
- ./tags</code></pre>
+            <pre> cd js-multigraph
+ ./tags</pre>
         </li>
 
         <li>
             <p>Edit the file ReleaseNotes.md in the top level directory of the js-multigraph project, to add whatever notes are pertinent to the new release. Be sure to include mention of the specific version number. Commit the change.</p>
 
-            <pre><code> emacs ReleaseNotes.md
+            <pre> emacs ReleaseNotes.md
  git add ReleaseNotes.md
- git commit -m 'updates ReleaseNotes.md in preparation for release 4.1'</code></pre>
+ git commit -m 'updates ReleaseNotes.md in preparation for release 4.1'</pre>
         </li>
 
         <li>
             <p>Run 'ant minify' to rebuild the built versions of Multigraph in the project; commit the results.</p>
 
-            <pre><code> ant minify
+            <pre> ant minify
  git add build
- git commit -m 'runs ant minify'</code></pre>
+ git commit -m 'runs ant minify'</pre>
         </li>
 
         <li>
             <p>Tag the release with the tag 'vM.N', where M.N is the version number, and with a log message using the -m option. For example:</p>
 
-            <pre><code> git tag -a v4.1 -m 'Release 4.1'</code></pre>
+            <pre> git tag -a v4.1 -m 'Release 4.1'</pre>
         </li>
 
         <li>
             <p>Push the master branch and the new tag to github</p>
 
-            <pre><code> git push origin master
- git push origin v4.1</code></pre>
+            <pre> git push origin master
+ git push origin v4.1</pre>
         </li>
 
         <li>
             <p>In the multigraph.github.io repo, run the <code>update-releases</code> script</p>
 
-            <pre><code> cd multigraph-github.io
- ./update-releases</code></pre>
+            <pre> cd multigraph-github.io
+ ./update-releases</pre>
 
             <p>This script updates the files in the 'download' directory by creating new ones called multigraph-4.1.js and multigraph-min-4.1.js, and copies of them called 'multigraph.js' and 'multigraph-min.js'. It also creates downloads/ReleaseNotes-4.1.md by copying ReleaseNotes.md file from the v4.1 tag, and updates various pages on the site with links to these files.</p>
 
@@ -121,16 +74,16 @@
         <li>
             <p>Preview the web site by running jekyll locally. Be sure to especially check the downloads page.</p>
 
-            <pre><code> jekyll --server
- browse to http://0.0.0.0:4000</code></pre>
+            <pre> jekyll --server
+ browse to http://0.0.0.0:4000</pre>
         </li>
 
         <li>
             <p>Commit the changes and push to github</p>
 
-            <pre><code> git add .
+            <pre> git add .
  git commit -m 'updates to js-multigraph creating release v4.1'
- git push</code></pre>
+ git push</pre>
         </li>
     </ol>
 
@@ -146,9 +99,9 @@
         <li>
             <p>In the js-multigraph repo, create an additional tag for the release, whose name is the release tag followed by the suffix "-bad", and push the new tag to github.</p>
 
-    <pre><code> cd js-multigraph
+    <pre> cd js-multigraph
  git tag -a -m 'tags v4.1 as bad' v4.1-bad v4.1 
- git push origin v4.1-bad</code></pre>
+ git push origin v4.1-bad</pre>
 
             <p>Note that it's important to use the full release tag name; for example, if the bad tag is "v4.1", you should create a tag named "v4.1-bad", not "4.1-bad".</p>
         </li>
@@ -156,24 +109,24 @@
         <li>
             <p>In the multigraph.github.io repo, delete the download files associated with the bad release, and re-run the <code>update-releases</code> script.</p>
 
-            <pre><code> cd multigraph-github.io
+            <pre> cd multigraph-github.io
  git rm download/*-4.1.*
- ./update-releases</code></pre>
+ ./update-releases</pre>
         </li>
 
         <li>
             <p>Preview the web site by running jekyll locally. Be sure to especially check the downloads page.</p>
 
-            <pre><code> jekyll --server
- browse to http://0.0.0.0:4000</code></pre>
+            <pre> jekyll --server
+ browse to http://0.0.0.0:4000</pre>
         </li>
 
         <li>
             <p>Commit the changes and push to github</p>
 
-            <pre><code> git add .
+            <pre> git add .
  git commit -m 'updates to js-multigraph marking release v4.1 as bad'
- git push</code></pre>
+ git push</pre>
         </li>
     </ol>
 
@@ -185,37 +138,33 @@
         <li>
             <p>Delete the tag from your js-multigraph project, and push the deletion to github.</p>
 
-            <pre><code> cd js-multigraph
+            <pre> cd js-multigraph
  git tag -d v4.1
- git push origin :refs/tags/v4.1</code></pre>
+ git push origin :refs/tags/v4.1</pre>
         </li>
 
         <li>
             <p>In the multigraph.github.io repo, delete the download files associated with the deleted release, and re-run the <code>update-releases</code> script.</p>
 
-            <pre><code> cd multigraph-github.io
+            <pre> cd multigraph-github.io
  git rm download/*-4.1.*
- ./update-releases</code></pre>
+ ./update-releases</pre>
         </li>
 
         <li>
             <p>Preview the web site by running jekyll locally. Be sure to especially check the downloads page.</p>
 
-            <pre><code> jekyll --server
- browse to http://0.0.0.0:4000</code></pre>
+            <pre> jekyll --server
+ browse to http://0.0.0.0:4000</pre>
         </li>
 
         <li>
             <p>Commit the changes and push to github</p>
 
-            <pre><code> git add .
+            <pre> git add .
  git commit -m 'updates to js-multigraph deleting release v4.1'
- git push</code></pre>
+ git push</pre>
         </li>
     </ol>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% include end.html %}
