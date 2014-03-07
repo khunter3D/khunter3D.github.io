@@ -1,0 +1,49 @@
+---
+title: Tester
+other: selected
+tester: selected
+---
+
+{% include header.html %}
+{% include inc.multigraph.html %}
+
+    <script type="text/javascript">$ = window.multigraph.jQuery;</script>
+    <link type="text/css" href="https://rawgithub.com/multigraph/js-multigraph-tester/master/src/tester.css" rel="stylesheet" media="screen"/>
+    <script type="text/javascript" src="https://rawgithub.com/multigraph/js-multigraph-tester/master/src/tester.js"></script>
+    <script type="text/javascript">
+      urlParams = function() {
+        var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1),
+            params = {};
+
+          while (match = search.exec(query)) {
+            params[decode(match[1])] = decode(match[2]);
+          }
+          return params;
+      };
+
+      $(document).ready(function () {
+          $("#tester").jsMultigraphTester();
+          var params = urlParams();
+          if (params.muglurl) {
+            $.ajax({ url      : params.muglurl,
+                     dataType : "text",
+                     success  : function(data) {
+                       $("#tester").jsMultigraphTester('setMugl', data);
+                   }});
+          }
+      });
+    </script>
+
+{% include content.html %}
+
+        <p>Use this page to experiment with Multigraph; you can switch back
+        and forth between editing a MUGL document in the <strong>MUGL</strong> tab, and viewing the
+        corresponding graph in the <strong>Graph</strong> tab below.</p>
+
+        <div id="tester"></div>
+
+{% include end.html %}
