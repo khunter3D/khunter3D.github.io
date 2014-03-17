@@ -47,3 +47,7 @@ table.examples td {
 table.examples td.content {
     width: 100%;
 }
+table.examples li.active a {
+    color: #000;
+    font-weight: bold;
+}
