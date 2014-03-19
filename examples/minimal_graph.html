@@ -1,0 +1,39 @@
+---
+title: Examples - minimal_graph.xml
+examples: selected
+example-minimal_graph: selected
+mugl: minimal_graph.xml
+layout: example
+---
+
+<h3 class="example-title">{{page.mugl}}</h3>
+
+<div class="multigraph" data-src="https://rawgithub.com/multigraph/js-multigraph/master/spec/mugl/{{page.mugl}}"></div>
+
+<!-- need to convert to css -->
+<table class="example-text">
+    <tr>
+        <td align="left">Download mugl: <a href="../lib/js-multigraph/spec/mugl/{{page.mugl}}">{{page.mugl}}</a>
+        </td>
+        <td align="right"><a href="../tester/?muglurl=../lib/js-multigraph/spec/mugl/{{page.mugl}}">Open in Tester</a>
+        </td>
+    </tr>
+</table>
+
+<pre class="example prettyprint">
+&lt;mugl&gt;
+  &lt;data&gt;
+    &lt;values&gt;
+      0, 3
+      1, 2
+      2, 4
+      3, 5
+      4, 3
+      5, 6
+      6, 7
+      7, 8
+      8, 5
+    &lt;/values&gt;
+  &lt;/data&gt;
+&lt;/mugl&gt;
+</pre>
