@@ -1,3 +1,9 @@
+.navbar-logo {
+    height: 20px;
+    width: 20px;
+    margin-top: -2px;
+}
+
 footer {
     bottom: 24px;
     position: absolute;
