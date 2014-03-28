@@ -50,8 +50,11 @@ table.examples td {
     vertical-align: text-top;
     padding-right: 20px;
 }
+table.examples td.navigation {
+    width: 20%;
+}
 table.examples td.content {
-    width: 100%;
+    width: auto;
 }
 table.examples li.active a {
     color: #000;
