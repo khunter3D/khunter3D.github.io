@@ -6,30 +6,46 @@ about: selected
 {% include header.html %}
 {% include inc.multigraph.html %}
 {% include inc.prettify.html %}
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 {% include content.html %}
 
       <div class="jumbotron">
-        <h1>Multigraph</h1>
+        <h1><i class="fa fa-bar-chart-o"></i> Multigraph</h1>
           <p class="lead" style="text-indent:0.5cm;">Graphs for the Web.</p>
         <p>Multigraph is a program for creating 2-dimensional scientific data graphs on web pages. It can read data in a variety of formats, and allows you to customize the appearance of the graph. Written in JavaScript and compatible with modern web browsers, including mobile devices.</p>
-        <p><a class="btn btn-primary btn-lg" href="https://github.com/multigraph/js-multigraph">View on GitHub</a></p>
+        <p><a class="btn btn-primary btn-lg" href="//github.com/multigraph/js-multigraph">View on GitHub</a></p>
       </div>
 
-        <h3>Interacting with a Multigraph</h3>
+        <div class="multigraph" data-src="/examples/graphs/temp_forecast_frontpage.xml" data-width="100%" data-height="200"></div>
 
-        <div class="multigraph" data-src="fill-downfill.xml" data-width="100%" data-height="200"></div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h1><i class="fa fa-arrows-h fa-3x"></i></h1>
+              <h2>Panning</h2>
+              <p>Just click and drag with your mouse (or finger) to drag the graph up and down!</p>
+            </div>
 
-        <p>This graph shows daily temperature data from a weather station near Asheville, NC. The blue bars represent the daily high and low temperatures – the bottom of the bar is the low for the day, and the top of the bar is the high. The green band in the background shows the official “normal” temperature range for this location. By looking at the actual daily data on top of the normal range, it’s easy to see whether weather during any given period was hotter or colder than normal.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h1><i class="fa fa-search-plus fa-3x"></i></h1>
+              <h2>Zooming</h2>
+              <p>Scroll in or scroll out using your mouse! Have hands? Just pinch to zoom!</p>
+            </div>
 
-      <h3>Panning</h3>
-      <p>The initial time period displayed in the graph above is the year 2012. If you want to see what happened before Jan 1 2012, just click and drag with your mouse (or finger, if you’re using a touch-screen device) to drag the graph to the right. You can also drag the graph vertically to change the temperature scale. (Whenever you start a new drag motion, Multigraph notices which orientation – horizontal or vertical – you first start dragging, and locks the motion to that orientation until you release the mouse or your finger.)</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h1><i class="fa fa-code fa-3x"></i></h1>
+              <h2>Easily integrated</h2>
+              <p>Just a few lines of code! Learn how to make your own graphs <a href="#">here</a>!</p>
+            </div>
 
-      <h3>Zooming</h3>
-      <p>You can also zoom in or out in the graph, by pointing the mouse cursor at an axis and rolling the mouse scroll wheel. (You don’t have to point exactly at the axis — Multigraph will zoom whichever axis the cursor is closest to.) If you’re using a touch-screen device, you can zoom by doing a two-finger pinch gesture.</p>
+          </div>
+        </div>
 
-        <p>An alternate way of zooming is to point the mouse cursor near an axis, hold down the shift key on the keyboard, and then (while continuing to hold down the shift key), click and drag the mouse.</p>
-
-        <h3>Creating a Multigraph</h3><a id="implement"></a>
+        <!--<h3>Creating a Multigraph</h3><a id="implement"></a>
         <p>To create an interactive graph of your own and publish it to a web site, you first write an XML file that describes the details of the graph. This XML file, in a format known as MUGL (for MUltiGraph xmL), includes things like plot styles, colors, axis dimensions, as well as the data to be plotted. You then put a line like the following in the <code>&#60;head&#62;</code> of your HTML document:</p>
     
         <pre class="prettyprint">&#60;script type="text/javascript" src="http://multigraph.github.io/download/multigraph-min.js"&#62;&#60;/script&#62;</pre>
@@ -40,9 +56,10 @@ about: selected
       
       <p>Then put the HTML file containing the above line, and the MUGL file that defines your graph, on a web server. That’s all there is to it. If you want, you can specify the width and height of the graph using CSS rules instead of using the <code>data-width</code> and <code>data-height</code> attributes, and it’s also possible to create and manipulate graphs using JavaScript code instead of the above HTML markup; see the <a href="#">documentation</a> for details.</p>
 
-      <p>You can see lots of examples of graphs, and the MUGL files that generate them, in the <a href="#">Examples</a> section of this web site.</p>
+      <p>You can see lots of examples of graphs, and the MUGL files that generate them, in the <a href="#">Examples</a> section of this web site.</p>-->
 
       <footer>
+          <a href="//github.com/multigraph/js-multigraph"><i class="fa fa-github"></i></a>
       </footer>
 
 {% include end.html %}

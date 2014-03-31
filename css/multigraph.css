@@ -1,10 +1,32 @@
+/*
+ * This file overrides several Bootstrap's styles
+ * or provides custom ones for various pages
+ */
+
 .navbar-logo {
     height: 20px;
     width: 20px;
     margin-top: -2px;
 }
 
+.jumbotron {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: url("/images/bg.png") #fafafa;
+}
+.bs-component h1, h2 {
+    text-align: center;
+}
+
+.bs-component p {
+    text-align: justify;
+}
+
 footer {
+    padding-top: 20px;
+    text-align: center;
+}
+.logos {
     bottom: 24px;
     position: absolute;
 }
