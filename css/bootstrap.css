@@ -44,7 +44,7 @@ body {
 }
 
 a {
-  background: transparent;
+  background: red;
 }
 
 a:focus {
