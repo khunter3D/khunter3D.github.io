@@ -1,6 +1,7 @@
 $('document').ready(function() {
   $('span.element span.expanded').hide();
 
+
   $('span.element').each(function() {
       var collapsed_span = $(this).find('>span.collapsed');
       var expanded_span = $(this).find('>span.expanded');
