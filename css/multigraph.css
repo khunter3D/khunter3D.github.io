@@ -19,14 +19,15 @@
 }
 
 .bs-component p {
-    text-align: justify;
+    text-align: right;
+    font-family: bold;
 }
 
 footer {
     padding-top: 20px;
     text-align: center;
 }
-.logos {
+.logos 
     bottom: 24px;
     position: absolute;
 }
@@ -36,8 +37,7 @@ table.logo-footer td {
 }
 table.release-table {
     margin-left: 40px;
-    width: auto;
-    border-collapse: collapse;
+
 }
 table.release-table td,th {
     padding: 6px 10px 6px 10px;
@@ -59,7 +59,6 @@ pre.example {
     height: 475px;
 }
 .multigraph {
-    width: auto;
     height: 400px;
 }
 table.example-text {
