@@ -13,8 +13,7 @@ docs: selected
       
 Name: band
 Description: Fills the region between two data lines with a solid color,
-             and draws a line segment between consecutive data points in
-             each line.
+and draws a line segment between consecutive data points in each line.
 </font>
 
 
@@ -55,35 +54,47 @@ padding:5px;
 </tr>
 <tr>
   <td>line1color</td>
-  <td> Color used for line segments connecting the
-                          values of the first variable. If line1color is
-                          not specified, linecolor is used</td>		
+  <td> Color used for line segments connecting the values of the first variable. If line1color is not specified, linecolor is used</td>		
 
-  <td>color</td>
+
+<td>color</td>
   
   
   
-  <td>(linecolor is used)</td>
+<td>(linecolor is used)</td>
+
+
+
+
+
+<tr>
+  <td>linecolor</td>
+  <td>Color used for line segments</td>
+  <td>Color</td>		
+  <td>black</td>
+  </tr>
+  
+  
+  <tr>
+  <td>linecolor</td>
+  <td>Color used for line segments</td>
+  <td>Color</td>		
+  <td>black</td>
+  </tr>
+  
+  
+  
+  
+  
+  
+  <tr>
+  <td>line1width</td>
+  <td>Width, in pixels, of line segments connecting the values of the first variable.  A value of 0 means do not draw line segments. If line1width is not specified, linewidth is used</td>
+  <td>number</td>		
+  <td>(linewidth is used)</td>
+  </tr>
 </tr>
 </table>
-    OPTION NAME:          linecolor
-    DESCRIPTION:          Color used for line segments. 
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        black
-
-    OPTION NAME:          linewidth
-    DESCRIPTION:          Width, in pixels, of line segments.  A
-                          value of 0 means do not draw line segments.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
-
-    OPTION NAME:          line1color
-    DESCRIPTION:          Color used for line segments connecting the
-                          values of the first variable. If line1color is
-                          not specified, linecolor is used.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        (linecolor is used)
-
     OPTION NAME:          line1width
     DESCRIPTION:          Width, in pixels, of line segments connecting the
                           values of the first variable.  A value of 0 means
