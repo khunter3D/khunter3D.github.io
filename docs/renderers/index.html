@@ -91,36 +91,51 @@ padding:5px;
   
   
   <tr>
+  <td>line2width</td>
+  <td>Width, in pixels, of line segments connecting the values of variable 2.
+  A value of 0 means do not draw line segments.
+  If line2width is not specified, linewidth is used</td>
+  <td>number</td>		
+  <td>(linewidth is used)</td>
+  </tr>
+
+<tr>
   <td>line2color</td>
   <td>Color used for line segments connecting the values of variable 2.
   If line2color is not specified, linecolor is used</td>
   <td>number</td>		
-  <td(linecolor is used)></td>
+  <td></td>(linecolor is used)</td>
   </tr>
-</tr>
+  
+  <tr>
+  <td>fillcolor</td>
+  <td>Color used for the fill area</td>
+  <td>color</td>		
+  <td> dark gray (0x808080)</td>
+  </tr>
+  
+  <tr>
+  <td>fillopacity</td>
+  <td>The opactiy of the fill area, in the range 0-1.
+  A value of 1 means completely opaque; a value of 0 means completely invisible</td>
+  <td>number</td>		
+  <td1></td>
+  </tr>
+  
+  <tr>
+  <td>line2color</td>
+  <td>Color used for line segments connecting the values of variable 2.
+  If line2color is not specified, linecolor is used</td>
+  <td>number</td>		
+  <td>(linecolor is used)</td>
+  </tr>
 </table>
 
 
-    OPTION NAME:          line2width
-    DESCRIPTION:          Width, in pixels, of line segments connecting the
-                          values of variable 2. A value of 0 means do not
-                          draw line segments. If line2width is not
-                          specified, linewidth is used.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        (linewidth is used)
 
-    OPTION NAME:          fillcolor
-    DESCRIPTION:          Color used for the fill area.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        dark gray (0x808080)
 
-    OPTION NAME:          fillopacity
-    DESCRIPTION:          The opactiy of the fill area, in the range 0-1.
-                          A value of 1 means completely opaque; a value of 0
-                          means completely invisible.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
- 
+
+
 ---
 
 Name: bar
