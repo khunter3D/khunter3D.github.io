@@ -657,13 +657,14 @@ and draws a line segment between consecutive data points in each line.
   <td>MEANING</td>
   </tr>
 <tr>
+  <td> DATAVALUE
+
+        </td>
   <td>Either a number or a datetime string.
 
         With DataValues, a datetime string may be specified in the
         17-character format YYYYMMDDHHmmssqqq, in which the letters
-        have the following meanings:
-
-        </td>
+        have the following meanings</td>		
   <td>Component   Meaning 
         YYYY        4-digit year
         MM          2-digit month (01--12)
@@ -671,12 +672,13 @@ and draws a line segment between consecutive data points in each line.
         HH          2-digit hour of day (00--23)
         mm          2-digit minutes (00--59)
         ss          2-digit seconds (00--59), or decimal seconds with millisecond precision
-        qqq         3-digit milliseconds (000--999; should only be present if ss does not contain a decimal)</td>		
-  <td>Any number of these components may be omitted from the
+        qqq         3-digit milliseconds (000--999; should only be present if ss does not contain a decimal)</td>
+     
+     
+     <td>Any number of these components may be omitted from the
         right-hand end of the string (except the year YYYY, which is
         always required), in which case the missing components are
-        assumed to be zero (except MM or DD, which default to 01</td>
-          
+        assumed to be zero (except MM or DD, which default to 01</td>     
           
 </tr>
 <tr>
