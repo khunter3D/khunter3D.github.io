@@ -648,13 +648,26 @@ and draws a line segment between consecutive data points in each line.
   </tr>
 <tr>
 <tr>
-  <td>linecolor</td>
+  <td>DataValue</td>
   <td>Color used for line segments</td>
   <td>Color</td>		
   <td>black</td>
   </tr>
 <tr>
-  <td>linewidth</td>
+  <td>Either a number or a datetime string.
+
+        With DataValues, a datetime string may be specified in the
+        17-character format YYYYMMDDHHmmssqqq, in which the letters
+        have the following meanings:
+
+        Component   Meaning 
+        YYYY        4-digit year
+        MM          2-digit month (01--12)
+        DD          2-digit day of month (01--31)
+        HH          2-digit hour of day (00--23)
+        mm          2-digit minutes (00--59)
+        ss          2-digit seconds (00--59), or decimal seconds with millisecond precision
+        qqq         3-digit milliseconds (000--999; should only be present if ss does not contain a decimal)</td>
   <td>Width, in pixels, of line segments.
   A value of 0 means do not draw line segments</td>		
   <td>number</td>
