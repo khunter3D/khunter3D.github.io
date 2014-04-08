@@ -681,17 +681,34 @@ and draws a line segment between consecutive data points in each line.
         assumed to be zero (except MM or DD, which default to 01</td>     
           
 </tr>
-<tr>
-  <td>line1color</td>
-  <td>Color used for line segments connecting the values of the first variable.
-  If line1color is not specified, linecolor is used</td>		
 
+<td> DATAMEASURE
 
-<td>color</td>
-  
-  
-  
-<td>(linecolor is used)</td>
+        </td>
+  <td>Either a number or a datetime string.
+
+        With DataValues, a datetime string may be specified in the
+        17-character format YYYYMMDDHHmmssqqq, in which the letters
+        have the following meanings</td>		
+  <td>Code   Meaning 
+        Y      years
+        M      months
+        W      weeks
+        D      days
+        H      hours
+        m      minutes
+        s      seconds
+        ms     milliseconds</td>
+     
+     
+     
+     
+     <td>Any number of these components may be omitted from the
+        right-hand end of the string (except the year YYYY, which is
+        always required), in which case the missing components are
+        assumed to be zero (except MM or DD, which default to 01</td>     
+          
+</tr>
 
 
 
@@ -702,7 +719,7 @@ and draws a line segment between consecutive data points in each line.
 
 Data Types:
 
-     DataValue:
+     DATAMEASURE:
 
         Either a number or a datetime string.
 
