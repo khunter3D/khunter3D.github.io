@@ -660,19 +660,21 @@ and draws a line segment between consecutive data points in each line.
         17-character format YYYYMMDDHHmmssqqq, in which the letters
         have the following meanings:
 
-        Component   Meaning 
+        </td>
+  <td>Component   Meaning 
         YYYY        4-digit year
         MM          2-digit month (01--12)
         DD          2-digit day of month (01--31)
         HH          2-digit hour of day (00--23)
         mm          2-digit minutes (00--59)
         ss          2-digit seconds (00--59), or decimal seconds with millisecond precision
-        qqq         3-digit milliseconds (000--999; should only be present if ss does not contain a decimal)</td>
-  <td>Width, in pixels, of line segments.
-  A value of 0 means do not draw line segments</td>		
-  <td>number</td>
-  
- <td>1</td>
+        qqq         3-digit milliseconds (000--999; should only be present if ss does not contain a decimal)</td>		
+  <td>Any number of these components may be omitted from the
+        right-hand end of the string (except the year YYYY, which is
+        always required), in which case the missing components are
+        assumed to be zero (except MM or DD, which default to 01</td>
+          
+          
 </tr>
 <tr>
   <td>line1color</td>
