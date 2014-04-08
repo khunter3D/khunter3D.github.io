@@ -26,8 +26,6 @@ h2 {font-size:11px;}
 and draws a line segment between consecutive data points in each line.
 </h2>
 
-
-
 <div class="table-responsive">
 <table class="table table-striped ">
 <tbody>
@@ -152,29 +150,32 @@ and draws a line segment between consecutive data points in each line.
 <tr>
 <tr>
   <td>barwidth</td>
-  <td>Color used for line segments</td>
-  <td>Color</td>		
-  <td>black</td>
+  <td>Width, in relative terms to the type of the 
+  axis the plot is on, of the bars</td>
+  <td>DataMeasure</td>		
+  <td>none</td>
   </tr>
 <tr>
-  <td>linewidth</td>
-  <td>Width, in pixels, of line segments.
-  A value of 0 means do not draw line segments</td>		
+  <td>baroffset</td>
+  <td>The offset, in pixels, of the left edge of
+                          each bar from the corresponding data value</td>		
   <td>number</td>
   
- <td>1</td>
+ <td>0</td>
 </tr>
 <tr>
-  <td>line1color</td>
-  <td>Color used for line segments connecting the values of the first variable.
-  If line1color is not specified, linecolor is used</td>		
+  <td>barbase</td>
+  <td>The location, relative to the plot's
+                          vertical axis, of the bottom of the bar; if
+                          no barbase is specified, the bars will
+                          extend down to the bottom of the plot area</td>		
 
 
-<td>color</td>
+<td>DataValue</td>
   
   
   
-<td>(linecolor is used)</td>
+<td>none</td>
 
 
 
@@ -182,18 +183,13 @@ and draws a line segment between consecutive data points in each line.
 
 <tr>
   <td>linecolor</td>
-  <td>Color used for line segments</td>
+  <td>The color to be used for the outline around
+                          each bar</td>
   <td>Color</td>		
   <td>black</td>
   </tr>
   
   
-   <tr>
-  <td>line1width</td>
-  <td>Width, in pixels, of line segments connecting the values of the first variable. A value of 0 means do not draw line segments. If line1width is not specified, linewidth is used</td>
-  <td>number</td>		
-  <td>(linewidth is used)</td>
-  </tr>
   
   
   
@@ -201,44 +197,33 @@ and draws a line segment between consecutive data points in each line.
   
   
   
-  <tr>
-  <td>line2width</td>
-  <td>Width, in pixels, of line segments connecting the values of variable 2.
-  A value of 0 means do not draw line segments.
-  If line2width is not specified, linewidth is used</td>
-  <td>number</td>		
-  <td>(linewidth is used)</td>
-  </tr>
-
-<tr>
-  <td>line2color</td>
-  <td>Color used for line segments connecting the values of variable 2.
-  If line2color is not specified, linecolor is used</td>
-  <td>number</td>		
-  <td>(linecolor is used)</td>
-  </tr>
   
   <tr>
   <td>fillcolor</td>
-  <td>Color used for the fill area</td>
+  <td>The color to be used for the fill inside
+                          each bar; if barbase is specified, this
+                          color is used only for bars that extend
+                          above the basea</td>
   <td>color</td>		
-  <td> dark gray (0x808080)</td>
+  <td>black</td>
   </tr>
   
   <tr>
   <td>fillopacity</td>
-  <td>The opactiy of the fill area, in the range 0-1.
-  A value of 1 means completely opaque; a value of 0 means completely invisible</td>
+  <td>The opactiy of the fill area inside each bar,
+                          in the range 0-1. A value of 1 means
+                          completely opaque; a value of 0 means
+                          completely invisible</td>
   <td>number</td>		
   <td>1</td>
   </tr>
   
   <tr>
-  <td>line2color</td>
-  <td>Color used for line segments connecting the values of variable 2.
-  If line2color is not specified, linecolor is used</td>
+  <td>hidelines</td>
+  <td>Bars which are less wide, in pixels, than
+                          this number do not render their outlines</td>
   <td>number</td>		
-  <td>(linecolor is used)</td>
+  <td>2</td>
   </tr>
 
       </tbody>
@@ -259,57 +244,7 @@ and draws a line segment between consecutive data points in each line.
 
 ---
 
-Name: bar
-Description: A Bar Renderer.
-Options:
- 
-    OPTION NAME:          barwidth
-    DESCRIPTION:          Width, in relative terms to the type of the
-                          axis the plot is on, of the bars.
-    ACCEPTED VALUE:       DataMeasure
-    DEFAULT VALUE:        none
-                          
-    OPTION NAME:          baroffset
-    DESCRIPTION:          The offset, in pixels, of the left edge of
-                          each bar from the corresponding data value.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        0
-                          
-    OPTION NAME:          barbase
-    DESCRIPTION:          The location, relative to the plot's
-                          vertical axis, of the bottom of the bar; if
-                          no barbase is specified, the bars will
-                          extend down to the bottom of the plot area.
-    ACCEPTED VALUE:       DataValue
-    DEFAULT VALUE:        none
-                          
-    OPTION NAME:          linecolor
-    DESCRIPTION:          The color to be used for the outline around
-                          each bar.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        black
 
-    OPTION NAME:          fillcolor
-    DESCRIPTION:          The color to be used for the fill inside
-                          each bar; if barbase is specified, this
-                          color is used only for bars that extend
-                          above the base.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        black
-
-    OPTION NAME:          fillopacity
-    DESCRIPTION:          The opactiy of the fill area inside each bar,
-                          in the range 0-1. A value of 1 means
-                          completely opaque; a value of 0 means
-                          completely invisible.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
-
-    OPTION NAME:          hidelines
-    DESCRIPTION:          Bars which are less wide, in pixels, than
-                          this number do not render their outlines.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        2
 
 ---
                            
