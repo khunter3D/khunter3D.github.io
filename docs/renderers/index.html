@@ -423,6 +423,12 @@ and draws a line segment between consecutive data points in each line.
   
   
   
+  
+  
+  
+  
+  
+  
   <tr>
   <td>pointoutlinecolor</td>
   <td>The color to use for the outline around each point</td>
@@ -535,7 +541,96 @@ and draws a line segment between consecutive data points in each line.
       </tbody>
 </table>
 </div>
-      <pre>
+
+<h1>Name: range</h1>
+
+<h2>Description: The RangeBar Renderer draws a vertical bar between two data
+             values, and an optional outline around the bars
+</h2>
+
+  
+  <div class="table-responsive">
+<table class="table table-striped ">
+<tbody>
+<tr>
+  <th>OPTION NAME</th>
+  <th>DESCRIPTION</th>		
+  <th>ACCEPTED VALUE</th>
+  <th>DEFAULT VALUE</th>
+  </tr>
+<tr>
+<tr>
+  <td>barwidth</td>
+  <td>Width, in relative terms to the type of the 
+  axis the plot is on, of the bars</td>
+  <td>DataMeasure</td>		
+  <td>none</td>
+  </tr>
+<tr>
+  <td>baroffset</td>
+  <td>The offset, in pixels, of the left edge of
+                          each bar from the corresponding data value</td>		
+  <td>number</td>
+  
+ <td>0</td>
+</tr>
+<tr>
+  
+  <td>linecolor</td>
+  <td>The color to be used for the outline around
+                          each bar</td>
+  <td>Color</td>		
+  <td>black</td>
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <tr>
+  <td>fillcolor</td>
+  <td>The color to be used for the fill inside
+                          each bar; if barbase is specified, this
+                          color is used only for bars that extend
+                          above the basea</td>
+  <td>color</td>		
+  <td>black</td>
+  </tr>
+  
+  <tr>
+  <td>fillopacity</td>
+  <td>The opactiy of the fill area inside each bar,
+                          in the range 0-1. A value of 1 means
+                          completely opaque; a value of 0 means
+                          completely invisible</td>
+  <td>number</td>		
+  <td>1</td>
+  </tr>
+  
+ <tr>
+  <td>linewidth</td>
+  <td>Width, in pixels, of line segments.
+  A value of 0 means do not draw line segments</td>		
+  <td>number</td>
+  
+ <td>1</td>
+</tr> 
+  <tr>
+  <td>hidelines</td>
+  <td>Bars which are less wide, in pixels, than
+                          this number do not render their outlines</td>
+
+
+      </tbody>
+</table>
+</div>
+    
+  
 
 
 
@@ -549,55 +644,9 @@ and draws a line segment between consecutive data points in each line.
 
 
 
-Name: rangebar
-Description: The RangeBar Renderer draws a vertical bar between two data
-             values, and an optional outline around the bars.
-Options:
 
-    OPTION NAME:          barwidth
-    DESCRIPTION:          Width, in relative terms to the type of the
-                          axis the plot is on, of the bars.
-    ACCEPTED VALUE:       DataMeasure
-    DEFAULT VALUE:        none
-                          
-    OPTION NAME:          baroffset
-    DESCRIPTION:          The offset of the left edge of each bar
-                          from the corresponding data value, as a
-                          fraction (0-1) of the barwidth.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        0
 
-    OPTION NAME:          fillcolor
-    DESCRIPTION:          Color used for filling the bars.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        0x808080 (dark gray)
 
-    OPTION NAME:          fillopacity
-    DESCRIPTION:          The opactiy of the fill area, in the range 0-1.
-                          A value of 1 means completely opaque; a value of 0
-                          means completely invisible.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
-
-    OPTION NAME:          linecolor
-    DESCRIPTION:          Color used for outlines around the bars.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        0x000000 (black)
-
-    OPTION NAME:          linewidth
-    DESCRIPTION:          Width, in pixels, of outlines around
-                          the bars.  A value of 0 (which is the
-                          default) means don't draw outlines.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        0
-
-    OPTION NAME:          hidelines
-    DESCRIPTION:          Bars which are less wide, in pixels, than
-                          this number do not render their outlines.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        2
-
----
 
 Data Types:
 
