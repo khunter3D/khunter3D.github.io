@@ -232,6 +232,92 @@ and draws a line segment between consecutive data points in each line.
     
   
     
+<h1>Name: fill</h1>
+
+<h2>Description: The Fill Renderer connects consecutive non-missing data
+             points with line segments and draws a solid fill between
+             the lines and the horizontal axis.
+</h2>
+
+<div class="table-responsive">
+<table class="table table-striped ">
+<tbody>
+<tr>
+  <th>OPTION NAME</th>
+  <th>DESCRIPTION</th>		
+  <th>ACCEPTED VALUE</th>
+  <th>DEFAULT VALUE</th>
+  </tr>
+<tr>
+<tr>
+  <td>linecolor</td>
+  <td>Color used for line segments</td>
+  <td>Color</td>		
+  <td>black</td>
+  </tr>
+<tr>
+  <td>linewidth</td>
+  <td>Width, in pixels, of line segments.
+  A value of 0 means do not draw line segments</td>		
+  <td>number</td>
+  
+ <td>1</td>
+</tr>
+<tr>
+  <td>downfillcolor</td>
+  <td>Color used for fill area that is below the
+                          fillbase, if a fillbase is specified. If no
+                          downfillcolor is specifed, fillcolor will
+                          be used for all fill areas</td>		
+
+
+<td>color</td>
+  
+  
+  
+<td>none</td>
+
+
+
+
+
+<tr>
+  
+  <tr>
+  <td>fillcolor</td>
+  <td>Color used for the fill area</td>
+  <td>color</td>		
+  <td> dark gray (0x808080)</td>
+  </tr>
+  
+  <tr>
+  <td>fillopacity</td>
+  <td>The opactiy of the fill area, in the range 0-1.
+  A value of 1 means completely opaque; a value of 0 means completely invisible</td>
+  <td>number</td>		
+  <td>1</td>
+  </tr>
+  
+  <tr>
+  <td>fillbase</td>
+  <td>The location along the plot's vertical axis
+                          of the horizontal line that defines the
+                          bottom (or top) of the filled region; if no
+                          fillbase is specified, the fill will extend
+                          down to the bottom of the plot area</td>
+  <td>DataValue</td>		
+  <td>none</td>
+  </tr>
+
+      </tbody>
+</table>
+</div>
+
+
+<h1>Name: bar</h1>
+
+<h2>Description: A Bar Renderer
+</h2>
       
       
       <pre>
@@ -242,59 +328,7 @@ and draws a line segment between consecutive data points in each line.
 
 
 
----
 
-
-
----
-                           
-Name: fill
-Description: The Fill Renderer connects consecutive non-missing data
-             points with line segments and draws a solid fill between
-             the lines and the horizontal axis.
-Options:
- 
-    OPTION NAME:          linecolor
-    DESCRIPTION:          Color used for line segments
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        black
-
-    OPTION NAME:          linewidth
-    DESCRIPTION:          Width, in pixels, of line segments.  A
-                          value of 0 means do not draw line segments.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
-
-    OPTION NAME:          fillcolor
-    DESCRIPTION:          Color used for the fill area.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        dark grey (0x808080)
-
-    OPTION NAME:          fillopacity
-    DESCRIPTION:          The opactiy of the fill area, in the range 0-1.
-                          A value of 1 means completely opaque; a value of 0
-                          means completely invisible.
-    ACCEPTED VALUE:       number
-    DEFAULT VALUE:        1
-
-    OPTION NAME:          fillbase
-    DESCRIPTION:          The location along the plot's vertical axis
-                          of the horizontal line that defines the
-                          bottom (or top) of the filled region; if no
-                          fillbase is specified, the fill will extend
-                          down to the bottom of the plot area.
-    ACCEPTED VALUE:       DataValue
-    DEFAULT VALUE:        none
-
-    OPTION NAME:          downfillcolor
-    DESCRIPTION:          Color used for fill area that is below the
-                          fillbase, if a fillbase is specified. If no
-                          downfillcolor is specifed, fillcolor will
-                          be used for all fill areas.
-    ACCEPTED VALUE:       color
-    DEFAULT VALUE:        none
-
----
 
 Name: line 
 Description: A Line Renderer
